@@ -1,1 +1,0 @@
-/home/agro/dotfiles/vim
