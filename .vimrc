@@ -73,3 +73,5 @@ set laststatus=2  " Always show status line.
 " gvim specific
 set mousehide  " Hide mouse after chars typed
 set mouse=a  " Mouse in all modes
+
+hi MatchParen cterm=bold ctermbg=black ctermfg=red
