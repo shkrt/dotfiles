@@ -60,6 +60,9 @@ set autoindent
 set smarttab
 set expandtab
 
+set wildmenu
+set wildmode=longest,list
+
 " Visual
 set showmatch  " Show matching brackets.
 set mat=5  " Bracket blinking.
