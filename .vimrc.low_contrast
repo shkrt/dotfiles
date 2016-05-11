@@ -56,9 +56,9 @@ set ruler  " Ruler on
 set nu  " Line numbers on
 set nowrap  " Line wrapping off
 set timeoutlen=250  " Time to wait after ESC (default causes an annoying delay)
-colorscheme solarized
+"colorscheme solarized
 set background=light
-"colorscheme smyck  " Uncomment this to set a default theme
+colorscheme smyck  " Uncomment this to set a default theme
 "colorscheme pyte  " Uncomment this to set a default theme
 "colorscheme base16-atelierdune  " Uncomment this to set a default theme
 
@@ -94,7 +94,8 @@ set mousehide  " Hide mouse after chars typed
 set mouse=a  " Mouse in all modes
 
 set nohlsearch
-let g:airline_theme='luna'
+let g:airline_theme='raven'
+"let g:airline_theme='luna'
 let g:airline_powerline_fonts = 1
 
 if has("autocmd")
@@ -106,6 +107,6 @@ hi Normal ctermbg=none
 highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE guifg=DarkGrey guibg=NONE
 highlight ColorColumn ctermbg=7
 hi TabLineFill ctermfg=Blue ctermbg=Black
-hi TabLineSel ctermfg=Blue ctermbg=Black
-hi TabLine ctermfg=Blue ctermbg=Black
+hi TabLineSel ctermfg=Grey ctermbg=Black
+hi TabLine ctermfg=Grey ctermbg=Black
 hi rubyDefine ctermbg=NONE
