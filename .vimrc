@@ -9,7 +9,12 @@ call vundle#begin()
 
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'scrooloose/nerdtree'
+Plugin 'slim-template/vim-slim.git'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+Plugin 'tpope/vim-fugitive'
+Plugin 'elixir-lang/vim-elixir'
+Plugin 'ctrlpvim/ctrlp.vim'
 
 call vundle#end()
 
@@ -22,8 +27,12 @@ let g:miniBufExplMapWindowNavArrows = 1
 let g:miniBufExplMapCTabSwitchBufs = 1
 let g:miniBufExplModSelTarget = 1
 
+" Make CtrlP use ag for listing the files. Way faster and no useless files.
+let g:ctrlp_user_command = 'ag %s -l --hidden --nocolor -g ""'
+let g:ctrlp_use_caching = 0
+
 set colorcolumn=80
-highlight ColorColumn ctermbg=0
+highlight ColorColumn ctermbg=14
 " alt+n or alt+p to navigate between entries in QuickFix
 "map   :cp 
 "map   :cn 
@@ -37,6 +46,7 @@ if has('gui_running')
   set guifont=Source\ Code\ Pro\ Medium\ 10
 endif
 
+"set relativenumber " always on 0th row
 set cf  " Enable error files & error jumping.
 set clipboard+=unnamed  " Yanks go on clipboard instead.
 set history=256  " Number of things to remember in history.
@@ -45,6 +55,8 @@ set ruler  " Ruler on
 set nu  " Line numbers on
 set nowrap  " Line wrapping off
 set timeoutlen=250  " Time to wait after ESC (default causes an annoying delay)
+colorscheme solarized  " Uncomment this to set a default theme
+"colorscheme pyte  " Uncomment this to set a default theme
 "colorscheme base16-atelierdune  " Uncomment this to set a default theme
 
 " Formatting (some of these are for coding in C and C++)
@@ -59,6 +71,7 @@ set cindent
 set autoindent
 set smarttab
 set expandtab
+set encoding=utf-8
 
 set wildmenu
 set wildmode=longest,list
@@ -68,7 +81,7 @@ set showmatch  " Show matching brackets.
 set mat=5  " Bracket blinking.
 set list
 " Show $ at end of line and trailing space as ~
-set lcs=tab:\ \ ,eol:💩,trail:~,extends:>,precedes:<
+set lcs=tab:\ \ ,eol:★,trail:~,extends:>,precedes:<
 set novisualbell  " No blinking .
 set noerrorbells  " No noise.
 set laststatus=2  " Always show status line.
@@ -77,4 +90,13 @@ set laststatus=2  " Always show status line.
 set mousehide  " Hide mouse after chars typed
 set mouse=a  " Mouse in all modes
 
-hi MatchParen cterm=bold ctermbg=black ctermfg=red
+hi MatchParen cterm=bold ctermbg=gray ctermfg=red
+
+set nohlsearch
+let g:airline_theme='luna'
+let g:airline_powerline_fonts = 1
+
+if has("autocmd")
+  filetype indent on
+endif
+
