@@ -32,7 +32,7 @@ let g:ctrlp_user_command = 'ag %s -l --hidden --nocolor -g ""'
 let g:ctrlp_use_caching = 0
 
 set colorcolumn=80
-highlight ColorColumn ctermbg=14
+
 " alt+n or alt+p to navigate between entries in QuickFix
 "map   :cp 
 "map   :cn 
@@ -90,8 +90,6 @@ set laststatus=2  " Always show status line.
 set mousehide  " Hide mouse after chars typed
 set mouse=a  " Mouse in all modes
 
-hi MatchParen cterm=bold ctermbg=gray ctermfg=red
-
 set nohlsearch
 let g:airline_theme='luna'
 let g:airline_powerline_fonts = 1
@@ -100,3 +98,11 @@ if has("autocmd")
   filetype indent on
 endif
 
+hi MatchParen cterm=bold ctermbg=gray ctermfg=red
+hi Normal ctermbg=none
+highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE guifg=DarkGrey guibg=NONE
+highlight ColorColumn ctermbg=7
+hi TabLineFill ctermfg=Blue ctermbg=Black
+hi TabLineSel ctermfg=Blue ctermbg=Black
+hi TabLine ctermfg=Blue ctermbg=Black
+hi rubyDefine ctermbg=NONE

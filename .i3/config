@@ -33,7 +33,8 @@ for_window [window_role="task_dialog"] floating enable
 
 # start a terminal
 #bindsym $mod+Return exec xfce4-terminal --hide-menubar
-bindsym $mod+Return exec terminator
+# bindsym $mod+Return exec terminator
+bindsym $mod+Return exec hyper
 #bindsym $mod+Return exec urxvt256c-ml
 #bindsym $mod+o exec xfce4-terminal --hide-menubar --working-directory /home/ruslan/sources/like
 
