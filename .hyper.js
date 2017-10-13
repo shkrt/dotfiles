@@ -5,10 +5,10 @@
 module.exports = {
   config: {
     // default font size in pixels for all tabs
-    fontSize: 15,
+    fontSize: 14,
 
     // font family with optional fallbacks
-    fontFamily: 'Fira Code, Menlo, "DejaVu Sans Mono", Consolas, "Lucida Console", monospace',
+    fontFamily: '"Fira Code", Menlo, "DejaVu Sans Mono", Consolas, "Lucida Console", monospace',
 
     // terminal cursor background color and opacity (hex, rgb, hsl, hsv, hwb or cmyk)
     cursorColor: 'rgba(248,28,229,0.8)',
@@ -73,6 +73,11 @@ module.exports = {
       backgroundOpacity: '1',
       accentColor: '#64FFDA',
       vibrancy: 'dark'
+    },
+
+    hyperBorder: {
+      borderColors: ['#54c1f6'],
+      borderWidth: '2px'
     },
 
     // the shell to run when spawning a new session (i.e. /usr/local/bin/fish)
