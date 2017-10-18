@@ -23,7 +23,7 @@ module.exports = {
     foregroundColor: '#fff',
 
     // terminal background color
-    backgroundColor: '#000',
+    backgroundColor: '#282828',
 
     // border color (window, tabs)
     borderColor: '#333',
@@ -51,29 +51,29 @@ module.exports = {
     // an array here instead of a color map object
     colors: {
       black: '#000000',
-      red: '#ff0000',
-      green: '#33ff00',
-      yellow: '#ffff00',
-      blue: '#0066ff',
-      magenta: '#cc00ff',
-      cyan: '#00ffff',
-      white: '#d0d0d0',
-      lightBlack: '#808080',
-      lightRed: '#ff0000',
-      lightGreen: '#33ff00',
-      lightYellow: '#ffff00',
-      lightBlue: '#0066ff',
-      lightMagenta: '#cc00ff',
-      lightCyan: '#00ffff',
-      lightWhite: '#ffffff'
+      red: '#c75646',
+      green: '#8eb33b',
+      yellow: '#d0b03c',
+      blue: '#4e90a7',
+      magenta: '#c8a0d1',
+      cyan: '#218693',
+      white: '#b0b0b0',
+      lightBlack: '#5d5d5d',
+      lightRed: '#e09690',
+      lightGreen: '#cdee69',
+      lightYellow: '#ffe377',
+      lightBlue: '#9cd9f0',
+      lightMagenta: '#fbb1f9',
+      lightCyan: '#77dfd8',
+      lightWhite: '#f7f7f7'
     },
 
-    MaterialTheme: {
-      theme: '',
-      backgroundOpacity: '1',
-      accentColor: '#64FFDA',
-      vibrancy: 'dark'
-    },
+    // MaterialTheme: {
+    //   theme: '',
+    //   backgroundOpacity: '1',
+    //   accentColor: '#64FFDA',
+    //   vibrancy: 'dark'
+    // },
 
     hyperBorder: {
       borderColors: ['#54c1f6'],
@@ -119,9 +119,9 @@ module.exports = {
   plugins: [
     'hyperterm-cursor',
     'hyperminimal',
-    'hyper-one-light',
     'hyperborder'
   ],
+    //'hyper-one-light',
 
   // in development, you can create a directory under
   // `~/.hyper_plugins/local/` and include it here
