@@ -15,6 +15,7 @@ Plugin 'vim-airline/vim-airline-themes'
 Plugin 'tpope/vim-fugitive'
 Plugin 'elixir-lang/vim-elixir'
 Plugin 'ctrlpvim/ctrlp.vim'
+"Plugin 'itchyny/lightline.vim'
 
 call vundle#end()
 
@@ -31,7 +32,7 @@ let g:miniBufExplModSelTarget = 1
 let g:ctrlp_user_command = 'ag %s -l --hidden --nocolor -g ""'
 let g:ctrlp_use_caching = 0
 
-set colorcolumn=80
+set colorcolumn=120
 
 " alt+n or alt+p to navigate between entries in QuickFix
 "map   :cp 
@@ -55,7 +56,7 @@ set ruler  " Ruler on
 set nu  " Line numbers on
 set nowrap  " Line wrapping off
 set timeoutlen=250  " Time to wait after ESC (default causes an annoying delay)
-colorscheme solarized  " Uncomment this to set a default theme
+colorscheme smyck  " Uncomment this to set a default theme
 "colorscheme pyte  " Uncomment this to set a default theme
 "colorscheme base16-atelierdune  " Uncomment this to set a default theme
 
@@ -101,7 +102,7 @@ endif
 hi MatchParen cterm=bold ctermbg=gray ctermfg=red
 hi Normal ctermbg=none
 highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE guifg=DarkGrey guibg=NONE
-highlight ColorColumn ctermbg=7
+highlight ColorColumn ctermbg=0
 hi TabLineFill ctermfg=Blue ctermbg=Black
 hi TabLineSel ctermfg=Blue ctermbg=Black
 hi TabLine ctermfg=Blue ctermbg=Black
