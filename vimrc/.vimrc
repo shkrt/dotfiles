@@ -56,7 +56,9 @@ set ruler  " Ruler on
 set nu  " Line numbers on
 set nowrap  " Line wrapping off
 set timeoutlen=250  " Time to wait after ESC (default causes an annoying delay)
-colorscheme smyck  " Uncomment this to set a default theme
+colorscheme solarized
+set background=light
+"colorscheme smyck  " Uncomment this to set a default theme
 "colorscheme pyte  " Uncomment this to set a default theme
 "colorscheme base16-atelierdune  " Uncomment this to set a default theme
 
@@ -102,7 +104,7 @@ endif
 hi MatchParen cterm=bold ctermbg=gray ctermfg=red
 hi Normal ctermbg=none
 highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE guifg=DarkGrey guibg=NONE
-highlight ColorColumn ctermbg=0
+highlight ColorColumn ctermbg=7
 hi TabLineFill ctermfg=Blue ctermbg=Black
 hi TabLineSel ctermfg=Blue ctermbg=Black
 hi TabLine ctermfg=Blue ctermbg=Black
