@@ -16,7 +16,9 @@ set $mod Mod4
 # is used in the bar {} block below.
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
-font pango:Ubuntu Mono 10
+font pango:Hack Bold 10
+# gaps outer 1
+# gaps inner 1
 # Before i3 v4.8, we used to recommend this one as the default:
 # font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
 # The font above is very space-efficient, that is, it looks good, sharp and
@@ -34,18 +36,18 @@ for_window [window_role="task_dialog"] floating enable
 # start a terminal
 #bindsym $mod+Return exec xfce4-terminal --hide-menubar
 # bindsym $mod+Return exec terminator
-bindsym $mod+Return exec hyper
+bindsym $mod+Return exec kitty
 #bindsym $mod+Return exec urxvt256c-ml
 #bindsym $mod+o exec xfce4-terminal --hide-menubar --working-directory /home/ruslan/sources/like
 
 # start a terminal
-bindsym $mod+b exec google-chrome-stable
+bindsym $mod+b exec google-chrome-stable --force-device-scale-factor=1.6
 
 # kill focused window
 bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec --no-startup-id i3-dmenu-desktop --dmenu="dmenu -i -l 15 -p 'dmenu'"
+bindsym $mod+d exec --no-startup-id j4-dmenu-desktop --dmenu="dmenu -i -l 15 -p 'dmenu'"
 
 # change focus
 bindsym $mod+h focus left
@@ -178,19 +180,18 @@ bar {
     # i3bar position
     position top
     # Using custom i3status.conf
-    # status_command i3status -c ~/.i3/i3status.conf
     status_command i3blocks
 }
 
 # Start background processes.
-exec --no-startup-id nm-applet
-exec --no-startup-id gnome-keyring-daemon --start --components=pkcs11,secrets,ssh
-exec --no-startup-id redshift-gtk
-exec --no-startup-id pa-applet
+#exec --no-startup-id nm-applet
+#exec --no-startup-id gnome-keyring-daemon --start --components=pkcs11,secrets,ssh
+#exec --no-startup-id redshift-gtk
+#exec --no-startup-id pa-applet
 exec --no-startup-id parcellite
 exec --no-startup-id compton --config ~/.i3/compton.conf -b
-exec --no-startup-id thunar --daemon
-exec --no-startup-id xautolock -time 10 -locker "~/.i3/locker.sh"
+#exec --no-startup-id thunar --daemon
+#exec --no-startup-id xautolock -time 10 -locker "~/.i3/locker.sh"
 
 # Background image
 exec --no-startup-id ~/.i3/wallpaper.sh
@@ -199,10 +200,8 @@ exec --no-startup-id ~/.i3/wallpaper.sh
 new_window pixel
 
 # Sreen brightness controls
-#bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
-bindsym XF86MonBrightnessUp exec /etc/acpi/actions/bl_up.sh
-bindsym XF86MonBrightnessDown exec /etc/acpi/actions/bl_down.sh
-#bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightness
+bindsym XF86MonBrightnessUp exec xbacklight -inc 10 # increase screen brightness
+bindsym XF86MonBrightnessDown exec xbacklight -dec 10 # decrease screen brightness
 
 # Media player controls
 bindsym XF86AudioPlay exec playerctl play-pause
@@ -210,6 +209,9 @@ bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
 #Pulseaudio controls
+# bindsym XF86AudioRaiseVolume exec "amixer -q sset Master,0 1+ unmute"
+# bindsym XF86AudioLowerVolume exec "amixer -q sset Master,0 1- unmute"
+# bindsym XF86AudioMute exec "amixer -q sset Master,0 toggle"
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5%
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5%
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle
