@@ -75,6 +75,8 @@ Made only to use in console, not tested with gvim or similar gui-wrappers.
 - search highlights are not persistent
 - autoindent
 - show matching brackets
+- newlines indicated with special symbol
+- trailing spaces indicated with special symbol
 
 #### tmuxinator configurations
 
