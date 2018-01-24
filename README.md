@@ -88,6 +88,8 @@ Rails-specific configurations.
 default. The layout is main-horizontal, with editor window on top, server console in bottom left, and utility console
 on the bottom right.
 
+![img](https://github.com/Shkrt/dotfiles/raw/master/scrot.png)
+
 #### psql configurations
 
 `.psqlrc`
